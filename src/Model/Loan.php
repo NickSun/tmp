@@ -75,10 +75,6 @@ class Loan
      */
     public function isOpen(\DateTime $date): bool
     {
-        if ($this->getStartDate() <= $date && $date <= $this->getEndDate()) {
-            return true;
-        }
-
-        return false;
+        return $this->getStartDate() <= $date && $date <= $this->getEndDate();
     }
 }
